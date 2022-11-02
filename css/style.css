@@ -1,0 +1,386 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+
+body
+{
+  background-image: url("../images/lfaj2.jpg");
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navigation bar css  -start */
+
+nav
+{
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navright
+{
+  
+  width: 35%;
+}
+
+.navbtn
+{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 15%;
+ 
+}
+
+.logo
+{
+  letter-spacing: 2px;
+}
+.navlinks
+{
+  display: flex;
+  justify-content: space-around;
+  
+  
+}
+
+.navlinks a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.linkpulse
+{
+  color: #fff;
+  padding: 8px 20px;
+  
+
+}
+
+.linkpulse:hover
+{
+  color: blue;
+}
+
+
+.navlinks li
+{
+  list-style-type: none;
+
+}
+
+
+.btn
+{
+  background: #fff;
+  border: 1px solid #008BDC;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #008BDC;
+  width: 60px;
+  padding: 7px 15px;
+  font-weight: 600;
+  min-width: 80px;
+  line-height: 1.14285714;
+  font-size: 14px;  
+  
+}
+
+/* Navigation bar css  -end */
+
+/* Modal css  -start*/
+.modal
+{
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+    padding-top: 70px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+
+.modal .modal-header
+{
+  text-align: center;
+  /* position: absolute; */
+  padding: 0 20px;
+  margin: 10px;
+  /* height: 30px; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal .close 
+{
+  float: right;
+  transform: rotate(45deg);
+  font-size: 25px;
+  cursor: pointer;
+
+}
+
+.modal .close a
+{
+  text-decoration: none;
+}
+
+.image
+{
+  border: 2px solid black;
+  border-radius: 15%;
+  
+}
+
+.modal .modal-content
+{
+   position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding-top: 20px;
+    border: 1px solid #888;
+    width: 450px;
+    /* height: 350px; */
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {top: -300px; opacity: 0} 
+  to {top: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top: -500px;}
+  to {top: 0}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/* Select tabs css */
+
+.modal .tabs{
+  
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    /* padding: 15px; */
+    /* margin: 10px; */
+    margin-left: 35px;
+    width: 85%;
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    
+}
+
+
+.modal .tab
+{
+  width: 50%;
+}
+
+.line{
+  background-color: #CFD8DC;
+  display: flex;
+  justify-content: center;
+  margin-left: 35px;
+  margin-bottom: 15px;
+  height: 1px;
+  width: 85%;
+}
+
+.tab:hover,
+.tab.active {
+border-bottom: 2px solid #2196F3;
+}
+
+
+
+
+.modal .form-ele
+{
+  padding: 5px;
+}
+
+.modal .form-gender
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .dropdown
+{
+  width: 86%;
+  outline: none;
+  font-size: 16px;
+  color: #999;
+  margin: 5px;
+  padding: 10px 32px;
+  background-color: #f6f6f6;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.modal input[type=text], input[type=password], input[type = tel], input[type = email]
+{
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+  padding: 10px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  width: 90%;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+
+}
+
+.modal input[type=text]:focus, input[type=password]:focus{
+  background-color: #fff;
+  border: 2px solid #8191f9;
+}
+
+.modal input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #8E49E8;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.signup-Modal
+{
+  
+  float: right;
+  border: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  /* padding: 24px; */
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  margin-top: 5%;
+  margin-bottom: 0;
+  margin-right: 10%;
+  
+
+}
+
+.signup-Modal .modal-content
+{
+   position: relative;
+    background-color:whitesmoke;
+    margin: auto;
+    /* padding-top: 20px; */
+    border: 1px solid transparent;
+    width: 300px;
+    /* height: 350px; */
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.signup-Modal .modal-header
+{
+  text-align: center;
+  /* position: absolute; */
+  padding: 0 20px;
+  margin: 10px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.signup-Modal .close 
+{
+  float: right;
+  transform: rotate(45deg);
+  font-size: 25px;
+  cursor: pointer;
+
+}
+
+.signup-Modal .close a
+{
+  text-decoration: none;
+}
+
+.signup-Modal input[type=text]:focus, input[type=password]:focus{
+  background-color: #fff;
+  border: 2px solid #8191f9;
+}
+
+.signup-Modal input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+.signup-Modal .dropdown
+{
+  width: 86%;
+  outline: none;
+  font-size: 16px;
+  color: #999;
+  margin: 5px;
+  padding: 10px 32px;
+  background-color: #f6f6f6;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.signup-Modal input[type=text], input[type=password], input[type = tel], input[type = email]
+{
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+  padding: 10px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  width: 90%;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+
+}

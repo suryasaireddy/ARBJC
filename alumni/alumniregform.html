@@ -1,0 +1,61 @@
+
+<?php
+
+include 'connect.php';
+
+if(isset($_POST['submit']))
+{
+    $email = $_POST['email'];
+    $password = $_POST['psw'];
+    $fname = $_POST['fullname'];
+    $regd_no = $_POST['regd'];
+    $phone = $_POST['phone'];
+    $company = $_POST['company'];
+
+    $sql = "insert into alumni(uname, regd_no, email, password, phone, company) values ('$fname','$regd_no','$email','$password','$phone','$company')";
+
+    if($connect->query($sql))
+    {
+      echo '<script>alert("Inserted successfully");</script>';
+    }
+    else
+      echo '<script>alert("Insertion failed");</script>';
+        
+       
+    $connect->close();    
+
+}
+
+?>
+
+
+
+<Html>  
+    <head>   
+    <title>  
+    Registration Page  
+    </title>  
+    </head>  
+    <body bgcolor="Lightskyblue">  
+    <br>  
+    <br>  
+    <form>  
+      
+    <label> Firstname </label>         
+    <input type="text" name="firstname" size="15"/> <br> <br>  
+    <label> Lastname: </label>         
+    <input type="text" name="lastname" size="15"/> <br> <br> 
+    <label> Registered Number </label>         
+    <input type="text" name="regno" size="15"/> <br> <br>  
+      
+    Phone :  
+    </label>  
+    <input type="text" name="country code"  value="+91" size="2"/>   
+    <input type="text" name="phone" size="10"/> <br> <br>  
+    Email:  
+    <input type="email" id="email" name="email"/> <br>    
+    <br> <br>    
+    <input type="button" value="Submit"/>  
+    </form>  
+    </body>  
+    </html>  
